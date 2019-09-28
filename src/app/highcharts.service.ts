@@ -7,6 +7,7 @@ export class HighchartsService {
     }
     
     createChart(el, cfg) {
+      debugger;
       Highcharts.chart(el, cfg);
     }
 }
