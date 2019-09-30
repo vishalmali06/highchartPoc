@@ -46,10 +46,10 @@ export class AppComponent {
               y: 88.19,
               drilldown: 'circle1'
             },
-            ['Completed', 47],
-            ['No Responce', 15],
-            ['Bonous Back', 23],
-            ['Reply To Invitation', 15]
+            ['donut_1', 47],
+            ['donut_2', 15],
+            ['donut_3', 23],
+            ['donut_4', 15]
           ],
           showInLegend: true,
           dataLabels: {
@@ -65,10 +65,10 @@ export class AppComponent {
               y: 88.19,
               drilldown: 'circle2'
             },
-            ['Completed', 47],
-            ['No Responce', 15],
-            ['Bonous Back', 23],
-            ['Reply To Invitation', 15]
+            ['donut_1', 47],
+            ['donut_2', 15],
+            ['donut_3', 23],
+            ['donut_4', 15]
           ],
           showInLegend: true,
           dataLabels: {
@@ -83,10 +83,10 @@ export class AppComponent {
             innerSize: 160,
             size: 200,
             data: [
-              ['Completed', 47],
-              ['No Responce', 15],
-              ['Bonous Back', 23],
-              ['Reply To Invitation', 15]
+              ['donut_1', 47],
+              ['donut_2', 15],
+              ['donut_3', 23],
+              ['donut_4', 15]
             ],
             showInLegend: true,
             dataLabels: {
@@ -99,10 +99,10 @@ export class AppComponent {
             innerSize: 70,
             size: 110,
             data: [
-              ['Completed', 47],
-              ['No Responce', 15],
-              ['Bonous Back', 23],
-              ['Reply To Invitation', 15]
+              ['donut_1', 47],
+              ['donut_2', 15],
+              ['donut_3', 23],
+              ['donut_4', 15]
             ],
             showInLegend: true,
             dataLabels: {
