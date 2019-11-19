@@ -17,6 +17,85 @@ Exporting(Highcharts);
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+
+  highchart = Highcharts;
+  chartOptions = {   
+    chart: {
+      type: 'pie'
+    },credits: {
+      enabled: false
+    },
+    title: {
+      text: '<b>22</b>%',
+      align: 'center',
+      verticalAlign: 'middle',
+      y: 0,
+      style: {
+        fontSize: '25px',
+        fontFamily: 'auto'
+      }
+    },
+    plotOptions: {
+      pie: {
+            showInLegend: true,
+            dataLabels: {
+              enabled: false
+            },
+            colors: [
+            'rgb(51, 157, 214)',
+            'rgb(153, 153, 153)',
+            'rgb(113, 113, 113)',
+            'rgb(51, 113, 149)'
+          ],
+          allowPointSelect: true,
+          cursor: 'pointer'
+      }
+    },
+    legend: {
+      align: 'center',
+      itemWidth: 100,
+      itemDistance: 0,
+    },
+    tooltip: {
+      useHTML: true,
+      backgroundColor: null,
+      borderWidth: 0,
+      shadow: false,
+      hideDelay: 999,
+      formatter: function () {
+        const perentage = this.percentage.toString().split('.');
+        return '<div style="padding: 5px 8px !important; border-radius: 3px !important; color: white !important;background-color:' +
+        this.color + '" class="high-chart-tooltip"> ' + perentage[0] + '%<br>' + this.key + '</div>';
+      },
+      shared: true,
+      enabled: true
+    },
+    series: [
+      {
+        name: 'Circle 1',
+        innerSize: 110,
+        size: 140,
+        data: [
+          ['Completed', 47],
+          ['No Responce', 15],
+          ['Bounce Back', 23],
+          ['Reply To Invitation', 15]
+        ]
+      },
+      {
+        name: 'Circle 2',
+        innerSize: 60,
+        size: 90,
+        data: [
+          ['Completed', 47],
+          ['No Responce', 15],
+          ['Bounce Back', 23],
+          ['Reply To Invitation', 15]
+        ]
+      }
+    ]
+  };
+  
   @ViewChild('charts') public chartEl: ElementRef;
   myOptions: any;
   constructor(private highcharts: HighchartsService) {
